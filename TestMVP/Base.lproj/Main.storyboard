@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--User View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="UserViewController" customModule="TestMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edz-uh-1qe">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No User available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYm-7f-jUC">
+                                        <rect key="frame" x="213.5" y="280.5" width="133" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jYm-7f-jUC" firstAttribute="centerY" secondItem="edz-uh-1qe" secondAttribute="centerY" id="KJj-UC-ZTL"/>
+                                    <constraint firstItem="jYm-7f-jUC" firstAttribute="centerX" secondItem="edz-uh-1qe" secondAttribute="centerX" id="W0V-Im-cQ8"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yyq-M5-gZw">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="R0O-tk-7CK">
+                                <rect key="frame" x="280" y="280" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9fL-Yg-Yzw"/>
+                                    <constraint firstAttribute="width" constant="40" id="jnk-2G-MmD"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yyq-M5-gZw" secondAttribute="bottom" id="7Jl-1T-RGL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="edz-uh-1qe" secondAttribute="bottom" id="FZJ-0E-dBS"/>
+                            <constraint firstItem="R0O-tk-7CK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JIc-8v-RRM"/>
+                            <constraint firstItem="R0O-tk-7CK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q04-d8-PC8"/>
+                            <constraint firstItem="edz-uh-1qe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rbo-4a-aIB"/>
+                            <constraint firstItem="yyq-M5-gZw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eIY-p4-GV7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="edz-uh-1qe" secondAttribute="trailing" id="jbA-hj-lgg"/>
+                            <constraint firstItem="yyq-M5-gZw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kAo-TB-eA0"/>
+                            <constraint firstItem="edz-uh-1qe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rhP-fO-HN1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yyq-M5-gZw" secondAttribute="trailing" id="uNC-kh-c0F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="R0O-tk-7CK" id="nQG-mi-xmk"/>
+                        <outlet property="emptyView" destination="edz-uh-1qe" id="JkM-EF-NL7"/>
+                        <outlet property="tableView" destination="yyq-M5-gZw" id="y0L-Qb-APd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
