@@ -1,7 +1,7 @@
 
 import Foundation
 
-class UserService: NSObject {
+class UserService {
 
     //the service delivers mocked data with a delay
     func getUsers(callBack:([User]) -> Void){

@@ -16,7 +16,7 @@ protocol UserView: NSObjectProtocol {
 
 class UserPresenter {
     private let userService:UserService
-    weak var userView : UserView?
+    weak private var userView : UserView?
     
     init(userService:UserService){
         self.userService = userService
