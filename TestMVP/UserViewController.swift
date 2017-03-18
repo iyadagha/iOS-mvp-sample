@@ -30,7 +30,6 @@ extension UserViewController: UITableViewDataSource {
         let userViewData = usersToDisplay[indexPath.row]
         cell.textLabel?.text = userViewData.name
         cell.detailTextLabel?.text = userViewData.age
-        cell.textLabel
         return cell
     }
 
