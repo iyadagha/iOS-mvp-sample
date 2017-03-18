@@ -6,8 +6,8 @@ class UserViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
 
-    private let userPresenter = UserPresenter(userService: UserService())
-    private var usersToDisplay = [UserViewData]()
+    fileprivate let userPresenter = UserPresenter(userService: UserService())
+    fileprivate var usersToDisplay = [UserViewData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,12 @@ class UserViewController: UIViewController {
 }
 
 extension UserViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersToDisplay.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "UserCell")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "UserCell")
         let userViewData = usersToDisplay[indexPath.row]
         cell.textLabel?.text = userViewData.name
         cell.detailTextLabel?.text = userViewData.age
@@ -46,16 +46,16 @@ extension UserViewController: UserView {
         activityIndicator?.stopAnimating()
     }
 
-    func setUsers(users: [UserViewData]) {
+    func setUsers(_ users: [UserViewData]) {
         usersToDisplay = users
-        tableView?.hidden = false
-        emptyView?.hidden = true;
+        tableView?.isHidden = false
+        emptyView?.isHidden = true;
         tableView?.reloadData()
     }
 
     func setEmptyUsers() {
-        tableView?.hidden = true
-        emptyView?.hidden = false;
+        tableView?.isHidden = true
+        emptyView?.isHidden = false;
     }
 
 

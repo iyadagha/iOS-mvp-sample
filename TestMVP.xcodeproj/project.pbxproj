@@ -155,9 +155,11 @@
 				TargetAttributes = {
 					9764C3A11C63D46E0089151E = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
 					};
 					9764C3B51C63D46E0089151E = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 9764C3A11C63D46E0089151E;
 					};
 				};
@@ -343,6 +345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iyadagha.test.mvp.TestMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -354,6 +357,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iyadagha.test.mvp.TestMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -365,6 +369,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iyadagha.test.mvp.TestMVPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMVP.app/TestMVP";
 			};
 			name = Debug;
@@ -377,6 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iyadagha.test.mvp.TestMVPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMVP.app/TestMVP";
 			};
 			name = Release;
@@ -400,6 +406,7 @@
 				9764C3C11C63D46E0089151E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9764C3C21C63D46E0089151E /* Build configuration list for PBXNativeTarget "TestMVPTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +415,7 @@
 				9764C3C41C63D46E0089151E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

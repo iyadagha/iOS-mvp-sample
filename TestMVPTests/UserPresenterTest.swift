@@ -2,11 +2,11 @@ import XCTest
 @testable import TestMVP
 
 class UserServiceMock: UserService {
-    private let users: [User]
+    fileprivate let users: [User]
     init(users: [User]) {
         self.users = users
     }
-    override func getUsers(callBack: ([User]) -> Void) {
+    override func getUsers(_ callBack: @escaping ([User]) -> Void) {
         callBack(users)
     }
 
@@ -16,7 +16,7 @@ class UserViewMock : NSObject, UserView{
     var setUsersCalled = false
     var setEmptyUsersCalled = false
 
-    func setUsers(users: [UserViewData]) {
+    func setUsers(_ users: [UserViewData]) {
         setUsersCalled = true
     }
 

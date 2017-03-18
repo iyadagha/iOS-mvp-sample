@@ -10,19 +10,19 @@ struct UserViewData{
 protocol UserView: NSObjectProtocol {
     func startLoading()
     func finishLoading()
-    func setUsers(users: [UserViewData])
+    func setUsers(_ users: [UserViewData])
     func setEmptyUsers()
 }
 
 class UserPresenter {
-    private let userService:UserService
-    weak private var userView : UserView?
+    fileprivate let userService:UserService
+    weak fileprivate var userView : UserView?
     
     init(userService:UserService){
         self.userService = userService
     }
     
-    func attachView(view:UserView){
+    func attachView(_ view:UserView){
         userView = view
     }
     
